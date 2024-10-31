@@ -7,6 +7,9 @@
 #include <string.h>
 
 const char* Game_OUTCOME(const char* player1, const char* player2) {
+
+	//FOR FIRST TEST - Player 1 Wins
+
 	if (	//if player 1 chooses paper and player 2 chooses rock
 		(strcmp(player1, "Paper") == 0 && strcmp(player2, "Rock") == 0)) {
 		return "Player1";
@@ -23,7 +26,8 @@ const char* Game_OUTCOME(const char* player1, const char* player2) {
 	}
 
 
-	//FOR SECOND TEST
+	//FOR SECOND TEST - Player 2 wins
+
 	if (	//if player 2 chooses paper and player 1 chooses rock
 		(strcmp(player2, "Paper") == 0 && strcmp(player1, "Rock") == 0)) {
 		return "Player2";
@@ -37,6 +41,23 @@ const char* Game_OUTCOME(const char* player1, const char* player2) {
 	if (	//if player 2 chooses scissors and player 1 chooses paper
 		(strcmp(player2, "Scissors") == 0 && strcmp(player1, "Paper") == 0)) {
 		return "Player2";
+	}
+
+	//FOR THIRD TEST - DRAW
+
+	if (	//if both players choose Paper
+		(strcmp(player2, "Paper") == 0 && strcmp(player1, "Paper") == 0)) {
+		return "DRAW!";
+	}
+
+	if (	//if both players choose Rock
+		(strcmp(player2, "Rock") == 0 && strcmp(player1, "Rock") == 0)) {
+		return "DRAW!";
+	}
+
+	if (	//if both players choose Scissors
+		(strcmp(player2, "Scissors") == 0 && strcmp(player1, "Scissors") == 0)) {
+		return "DRAW!";
 	}
 
 
