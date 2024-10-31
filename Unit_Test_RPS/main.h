@@ -1,7 +1,5 @@
 #pragma once
 
+// create test function declarations
 
-#ifndef MAIN_H
-#define MAIN_H
 
-#endif //MAIN_H
