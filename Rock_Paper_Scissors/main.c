@@ -8,6 +8,23 @@
 
 const char* Game_OUTCOME(const char* player1, const char* player2) {
 
+	//CHECK FOR INVALID INPUTS BEFORE TESTS
+	//FOR FOURTH TEST - INVALID INPUTS
+
+	if (	//Check for invalid inputs from player1
+		(strcmp(player1, "Scissors") != 0 &&
+			strcmp(player1, "Paper") != 0 &&
+			strcmp(player1, "Rock") != 0)) {
+		return "INVALID INPUT!";
+	}
+
+	if (	//Check for invalid inputs from player2
+		(strcmp(player2, "Scissors") != 0 &&
+			strcmp(player2, "Paper") != 0 &&
+			strcmp(player2, "Rock") != 0)) {
+		return "INVALID INPUT!";
+	}
+
 	//FOR FIRST TEST - Player 1 Wins
 
 	if (	//if player 1 chooses paper and player 2 chooses rock
@@ -59,6 +76,7 @@ const char* Game_OUTCOME(const char* player1, const char* player2) {
 		(strcmp(player2, "Scissors") == 0 && strcmp(player1, "Scissors") == 0)) {
 		return "DRAW!";
 	}
+
 
 
 }
